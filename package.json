@@ -4,7 +4,7 @@
   "description": "",
   "main": "rupert.js",
   "scripts": {
-    "start": "npx tsc && node build/rupert.js"
+    "start": "pnpm exec tsc && node build/rupert.js"
   },
   "keywords": [
     "rupert"
