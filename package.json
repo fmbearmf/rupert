@@ -1,0 +1,29 @@
+{
+  "name": "rupert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rupert.js",
+  "scripts": {
+    "start": "npx tsc && node build/rupert.js"
+  },
+  "keywords": [
+    "rupert"
+  ],
+  "author": "bearfm",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@types/node": "^20.11.16",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.4"
+  }
+}
