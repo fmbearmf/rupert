@@ -29,6 +29,10 @@ exports.ExecCommand = {
                 interaction.editReply(stderr.toString()).catch(console.log);
                 return;
             }
+            if (!stdout.toString()) {
+                interaction.editReply("** **");
+                return;
+            }
             interaction.editReply(stdout.toString()).catch(console.log);
         });
     }
