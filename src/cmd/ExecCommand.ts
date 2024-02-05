@@ -27,7 +27,7 @@ export const ExecCommand: Command = {
                 return;
             }
 
-            interaction.editReply(stdout.toString()).catch(interaction.editReply);
+            interaction.editReply(stdout.toString()).catch(console.log);
         });
     }
 };
