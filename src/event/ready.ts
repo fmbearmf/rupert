@@ -1,7 +1,7 @@
-import { ActivityType, Client } from "discord.js";
-import { cmds } from "../cmd/rupert3";
+import { ActivityType, Client, REST, Routes } from "discord.js";
+import { cmds } from "../cmd/cmds";
 
-export default (client: Client): void => {
+export default (client: Client, restClient: REST): void => {
     client.on("ready", async () => {
         if (!client.user || !client.application) {
             return;
@@ -19,5 +19,14 @@ export default (client: Client): void => {
         });
 
         console.log(client.user.username + " online. yippee.");
+
+        const commandData = cmds.map((command) => command);
+
+        await restClient.put(
+            Routes.applicationGuildCommands(
+                client.user.id, "1114565796404928594"
+            ),
+            {body: commandData}
+        );
     });
 };

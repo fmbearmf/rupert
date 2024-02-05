@@ -1,9 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
-import { Client, GatewayIntentBits } from "discord.js";
-import ready from "./event/rupert3";
-import interactionCreation from "./event/rupert4";
-import messageSent from "./event/rupert2";
+import { Client, GatewayIntentBits, REST } from "discord.js";
+import ready from "./event/ready";
+import interactionCreation from "./event/interactionCreate";
+import messageSent from "./event/messageCreate";
 
 if (!process.env.TOKEN) throw new Error("Token not defined.");
 
@@ -16,7 +16,11 @@ const client = new Client({
     ],
 });
 
-ready(client);
+const rest = new REST({version: "9"}).setToken(
+    process.env.TOKEN as string
+);
+
+ready(client, rest);
 interactionCreation(client);
 messageSent(client);
 

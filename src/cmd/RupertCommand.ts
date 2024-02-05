@@ -1,5 +1,5 @@
 import { ApplicationCommandType, Client, CommandInteraction } from "discord.js";
-import { Command } from "./rupert2";
+import { Command } from "./cmd";
 import { eep } from "../eep";
 
 export const RupertCommand: Command = {
