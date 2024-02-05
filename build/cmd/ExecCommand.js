@@ -21,7 +21,7 @@ exports.ExecCommand = {
         const commandString = commandObj.value?.toString();
         if (!commandString)
             return;
-        if (commandString.toLowerCase().includes("sudo ") || commandString.toLowerCase().includes("rm ") || commandString.toLowerCase().includes("systemctl ") || commandString.toLowerCase().includes("|")) {
+        if (commandString.toLowerCase().includes("sudo ") || commandString.toLowerCase().includes("rm ") || commandString.toLowerCase().includes("systemctl ") || commandString.toLowerCase().includes("|") || commandString.toLowerCase().includes(">") || commandString.toLowerCase().includes("ln ") || commandString.toLowerCase().includes("&")) {
             interaction.editReply("you can't run that command.");
             return;
         }
