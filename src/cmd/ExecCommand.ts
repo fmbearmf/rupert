@@ -35,8 +35,8 @@ export const ExecCommand: Command = {
         } else exec(`${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, 
             {   shell: "/usr/bin/bash", 
                 env: { PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" },
-                uid: 65534,
-                gid: 65534,
+                uid: 1002,
+                gid: 1002,
                 cwd: "/",
             },
             (err, stdout, stderr) => {
