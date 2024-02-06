@@ -24,18 +24,25 @@ export const ExecCommand: Command = {
         if (commandString.toLowerCase().includes("sudo ") || commandString.toLowerCase().includes("rm ") || commandString.toLowerCase().includes("systemctl ") || commandString.toLowerCase().includes("|") || commandString.toLowerCase().includes(">") || commandString.toLowerCase().includes("ln ") || commandString.toLowerCase().includes("&")) {
             interaction.editReply("you can't run that command.");
             return;
-        } else exec(`sudo -u ubuntu /bin/bash -c "${commandString}" | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, { shell: "/usr/bin/bash", env: { PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" } }, (err, stdout, stderr) => {
-            if (err) {
-                interaction.editReply(stderr.toString()).catch(console.log);
-                return;
-            }
+        } else exec(`${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, 
+            {   shell: "/usr/bin/bash", 
+                env: { PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" },
+                uid: 65534,
+                gid: 65534,
+                cwd: "/",
+            },
+            (err, stdout, stderr) => {
+                if (err) {
+                    interaction.editReply(stderr.toString()).catch(console.log);
+                    return;
+                }
 
-            if (!stdout.toString()) {
-                interaction.editReply("** **");
-                return;
-            }
+                if (!stdout.toString()) {
+                    interaction.editReply("** **");
+                    return;
+                }
 
-            interaction.editReply(stdout.toString()).catch(console.log);
-        });
+                interaction.editReply(stdout.toString()).catch(console.log);
+            });
     }
 };
