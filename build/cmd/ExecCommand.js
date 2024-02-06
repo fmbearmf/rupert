@@ -34,10 +34,8 @@ exports.ExecCommand = {
             return;
         }
         else
-            (0, child_process_1.exec)(`${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, { shell: "/usr/bin/bash",
+            (0, child_process_1.exec)(`sudo -u ruper -g ruper ${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, { shell: "/usr/bin/bash",
                 env: { PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" },
-                uid: 1002,
-                gid: 1002,
                 cwd: "/",
             }, (err, stdout, stderr) => {
                 if (err) {

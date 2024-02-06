@@ -32,11 +32,9 @@ export const ExecCommand: Command = {
             commandString.toLowerCase().includes("chmod ")) {
             interaction.editReply("you can't run that command.");
             return;
-        } else exec(`${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, 
+        } else exec(`sudo -u ruper -g ruper ${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, 
             {   shell: "/usr/bin/bash", 
                 env: { PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" },
-                uid: 1002,
-                gid: 1002,
                 cwd: "/",
             },
             (err, stdout, stderr) => {
