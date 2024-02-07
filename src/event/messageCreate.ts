@@ -6,6 +6,9 @@ export default (client: Client): void => {
         if (message.author.id === client.user?.id)
             if (Math.random() < 0.98) return;
 
+        if (message.author.id != "470010465486110730")
+            return;
+
         if (Math.random() >= 0.99) {
             message.reply({ content: "ok thats crazy" });
             return;
