@@ -6,7 +6,7 @@ export default (client: Client): void => {
         if (message.author.id === client.user?.id)
             if (Math.random() < 0.98) return;
 
-        if (message.author.id != "470010465486110730")
+        if ((message.author.id != "470010465486110730") && (message.author.id != "694699534554497046"))
             return;
 
         if (Math.random() >= 0.88) {
