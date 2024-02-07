@@ -9,17 +9,17 @@ export default (client: Client): void => {
         if (message.author.id != "470010465486110730")
             return;
 
-        if (Math.random() >= 0.94) {
+        if (Math.random() >= 0.88) {
             message.reply({ content: "ok thats crazy" });
             return;
         }
 
-        if (Math.random() >= 0.98) {
+        if (Math.random() >= 0.95) {
             message.reply({ content: "i didn't know that wow" });
             return;
         }
 
-        if (Math.random() >= 0.97) {
+        if (Math.random() >= 0.70) {
             message.reply({ content: "how can i invest in this?" });
             return;
         }
@@ -29,7 +29,7 @@ export default (client: Client): void => {
             return;
         }
 
-        if (Math.random() >= 0.95) {
+        if (Math.random() >= 0.79) {
             message.reply({ content: "shut up pixel!" });
             return;
         }
