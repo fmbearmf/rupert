@@ -9,7 +9,7 @@ export default (client: Client): void => {
         if (message.author.id != "470010465486110730")
             return;
 
-        if (Math.random() >= 0.99) {
+        if (Math.random() >= 0.94) {
             message.reply({ content: "ok thats crazy" });
             return;
         }
@@ -29,7 +29,7 @@ export default (client: Client): void => {
             return;
         }
 
-        if (Math.random() >= 0.99 && message.author.id == "470010465486110730") {
+        if (Math.random() >= 0.95 && message.author.id == "470010465486110730") {
             message.reply({ content: "shut up pixel!" });
             return;
         }
