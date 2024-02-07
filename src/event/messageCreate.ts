@@ -16,6 +16,11 @@ export default (client: Client): void => {
             return;
         }
 
+        if (Math.random() >= 0.97) {
+            message.reply({ content: "how can i invest in this?" });
+            return;
+        }
+
         if (Math.random() >= 0.99) {
             message.reply({ content: "Please help me. لقد شوشوا كلامي"});
             return;
