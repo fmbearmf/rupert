@@ -39,7 +39,7 @@ export default (client: Client): void => {
             return;
         }
 
-        if (Math.random() >= 0.98) {
+        if (Math.random() >= 0.50) {
             message.reply({ content: await RandomStatement() });
             return;
         }
