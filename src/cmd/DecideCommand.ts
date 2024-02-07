@@ -15,7 +15,7 @@ export const DecideCommand: Command = {
 
         await eep(5000).then(() => {
             interaction.editReply({
-                content: `${decision}`
+                content: `${decision ? "true" : "false"}`
             });
         });
     }
