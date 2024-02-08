@@ -34,7 +34,8 @@ export const ExecCommand: Command = {
             commandString.toLowerCase().includes("ln ") ||
             commandString.toLowerCase().includes("&") ||
             commandString.toLowerCase().includes("cat ") ||
-            commandString.toLowerCase().includes("chmod ")) {
+            commandString.toLowerCase().includes("chmod ") || 
+            commandString.toLowerCase().includes("vim ")) {
             interaction.editReply("you can't run that command.");
             return;
         } else exec(`sudo -u ruper -g ruper ${commandString} | sed 's/\x1B\\[[0-9;]\\{1,\\}[A-Za-z]//g'`, 
