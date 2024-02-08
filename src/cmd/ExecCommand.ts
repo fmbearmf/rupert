@@ -17,6 +17,11 @@ export const ExecCommand: Command = {
     run: async (client: Client, interaction: CommandInteraction) => {
         await interaction.deferReply();
 
+        if ((interaction.user.id == "470010465486110730") || (interaction.user.id == "694699534554497046")) {
+            interaction.editReply({ content: "nice try Pixel, you dont get to use this command" });
+            return;
+        }
+
         const commandObj = interaction.options.get("command", true);
         const commandString = commandObj.value?.toString();
         if (!commandString) return;
