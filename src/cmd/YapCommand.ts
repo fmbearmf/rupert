@@ -7,7 +7,7 @@ export const YapCommand: Command = {
     description: "talk sir!",
     type: ApplicationCommandType.ChatInput,
     run: async (client: Client, interaction: CommandInteraction) => {
-        interaction.deferReply();
+        await interaction.deferReply();
         
         interaction.editReply({ content: await RandomStatement() });
     }

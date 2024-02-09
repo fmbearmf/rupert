@@ -7,7 +7,7 @@ export const RupertCommand: Command = {
     description: "does a thing me thinks",
     type: ApplicationCommandType.ChatInput,
     run: async (client: Client, interaction: CommandInteraction) => {
-        interaction.deferReply();
+        await interaction.deferReply();
         await eep(5000).then(() => {
             interaction.editReply({
                 content: "rupert"

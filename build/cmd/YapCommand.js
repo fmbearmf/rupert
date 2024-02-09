@@ -11,7 +11,7 @@ exports.YapCommand = {
     description: "talk sir!",
     type: discord_js_1.ApplicationCommandType.ChatInput,
     run: async (client, interaction) => {
-        interaction.deferReply();
+        await interaction.deferReply();
         interaction.editReply({ content: await (0, RandomStatement_1.default)() });
     }
 };
