@@ -9,6 +9,6 @@ export const YapCommand: Command = {
     run: async (client: Client, interaction: CommandInteraction) => {
         await interaction.deferReply();
         
-        interaction.editReply({ content: await RandomStatement() });
+        interaction.editReply({ content: `<@470010465486110730> ${await RandomStatement()}` });
     }
 };
