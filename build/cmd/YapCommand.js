@@ -7,8 +7,8 @@ exports.YapCommand = void 0;
 const discord_js_1 = require("discord.js");
 const RandomStatement_1 = __importDefault(require("../event/ai/RandomStatement"));
 exports.YapCommand = {
-    name: "rupert",
-    description: "does a thing me thinks",
+    name: "yap",
+    description: "talk sir!",
     type: discord_js_1.ApplicationCommandType.ChatInput,
     run: async (client, interaction) => {
         interaction.deferReply();

@@ -3,8 +3,8 @@ import { Command } from "./cmd";
 import RandomStatement from "../event/ai/RandomStatement";
 
 export const YapCommand: Command = {
-    name: "rupert",
-    description: "does a thing me thinks",
+    name: "yap",
+    description: "talk sir!",
     type: ApplicationCommandType.ChatInput,
     run: async (client: Client, interaction: CommandInteraction) => {
         interaction.deferReply();
