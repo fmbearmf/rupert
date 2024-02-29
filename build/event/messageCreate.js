@@ -6,7 +6,7 @@ exports.default = (client) => {
             if (Math.random() < 0.98)
                 return;
         if (message.content.toLowerCase().includes("rupert")) {
-            message.reply({ content: "rupert" });
+            message.reply({ content: "you called?" });
             return;
         }
     });
