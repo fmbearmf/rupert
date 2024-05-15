@@ -11,8 +11,8 @@ export default (client: Client, restClient: REST): void => {
 
         client.user.setPresence({
             activities: [{
-                name: "a duel with god.",
-                state: "God is losing. Only Rupert will stand soon.",
+                name: "church of rupert",
+                state: "rupert",
                 type: ActivityType.Competing,
                 url: "https://github.com/bearfm"
             }]
