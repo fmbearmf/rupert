@@ -10,8 +10,8 @@ exports.default = (client, restClient) => {
         await client.application.commands.set(cmds_1.cmds);
         client.user.setPresence({
             activities: [{
-                    name: "a duel with god.",
-                    state: "God is losing. Only Rupert will stand soon.",
+                    name: "church of rupert",
+                    state: "rupert",
                     type: discord_js_1.ActivityType.Competing,
                     url: "https://github.com/bearfm"
                 }]
