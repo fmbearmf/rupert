@@ -19,10 +19,8 @@ const handleSlash = async (client: Client, interaction: CommandInteraction): Pro
     const slashCmd = cmds.find(cmd => cmd.name === interaction.commandName);
 
     if (!slashCmd) {
-        await interaction.reply({ content: "uhhh something screwed up. tell bear." });
+        await interaction.reply({ content: "uhhh something screwed up. tell bear <@307677300730757120>." });
         console.error(`ERROR: ${interaction.commandName} doesn't exist.`);
         console.error(`ERROR: Offending user: ${interaction.user}`);
-    }
-
-    slashCmd?.run(client, interaction);
+    } else slashCmd.run(client, interaction);
 };

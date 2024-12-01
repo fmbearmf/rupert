@@ -1,4 +1,5 @@
 import { Client,  Message } from "discord.js";
+import RandomStatement from "./ai/RandomStatement";
 
 export default (client: Client): void => {
     client.on("messageCreate", async (message: Message) => {
@@ -10,5 +11,11 @@ export default (client: Client): void => {
             return;
         }
 
+        if (Math.random() > 0.95) {
+            RandomStatement().then((stmt) => {
+                message.reply(`${stmt}`);
+            });
+            return;
+        }
     });
 };

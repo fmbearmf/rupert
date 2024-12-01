@@ -11,14 +11,14 @@ export default (client: Client, restClient: REST): void => {
 
         client.user.setPresence({
             activities: [{
-                name: "church of rupert",
+                name: "RupertTona 500",
                 state: "rupert",
                 type: ActivityType.Competing,
-                url: "https://github.com/bearfm"
+                url: "https://github.com/fmbearmf"
             }]
         });
 
-        console.log(client.user.username + " online. yippee.");
+        console.log(client.user.username + " online. !!!!");
 
         const commandData = cmds.map((command) => command);
 
