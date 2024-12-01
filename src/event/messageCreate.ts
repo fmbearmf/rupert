@@ -11,7 +11,7 @@ export default (client: Client): void => {
             return;
         }
 
-        if (Math.random() > 0.95) {
+        if (Math.random() > 0.98) {
             RandomStatement().then((stmt) => {
                 message.reply(`${stmt}`);
             });
