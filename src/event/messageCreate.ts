@@ -12,7 +12,7 @@ export default (client: Client): void => {
         }
 
         if (message.author.id === "470010465486110730") { // pixel's ID
-            if (Math.random() > 0.8) {
+            if (Math.random() > 0.3) {
                 RandomStatement().then((m0) => {
                     RandomStatement().then((m1) => {
                         RandomStatement().then((m2) => {
@@ -21,7 +21,7 @@ export default (client: Client): void => {
                     });
                 });
             }
-        }
+        } else console.debug(message.author.id);
 
         if (Math.random() > 0.98) {
             RandomStatement().then((stmt) => {
