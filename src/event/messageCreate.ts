@@ -21,7 +21,7 @@ export default (client: Client): void => {
                     });
                 });
             }
-        } else console.debug(message.author.id);
+        }
 
         if (Math.random() > 0.98) {
             RandomStatement().then((stmt) => {
