@@ -11,7 +11,7 @@ export default async (): Promise<string> => {
     const adjIndex: number = Math.floor(Math.random() * adjectives.length);
     const verbIndex: number = Math.floor(Math.random() * verbs.length);
 
-    const stmt = `${adjectives[adjIndex]} ${nouns[nounIndex]} ${verbs[verbIndex]}...`;
+    const stmt = `${adjectives[adjIndex]} ${nouns[nounIndex]} ${(Math.random() >= 0.91) ? verbs[verbIndex] : ""}...`;
 
     return stmt;
 };
