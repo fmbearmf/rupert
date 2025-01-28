@@ -23,6 +23,10 @@ export default (client: Client): void => {
             }
         }
 
+        if (Math.random() >= 0.969) {
+            message.reply("i do NOT care! silence!");
+        }
+
         if (Math.random() >= 0.978) {
             RandomStatement().then((stmt) => {
                 message.reply(`${stmt}`);
