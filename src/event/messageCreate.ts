@@ -11,6 +11,13 @@ export default (client: Client): void => {
             return;
         }
 
+        if (message.author.id === "674819147963564054") {
+            if (Math.random() >= 0.94) {
+                message.reply("yeah okay, 'glistermelon'. stinky ahh");
+                return;
+            }
+        }
+
         if (message.author.id === "470010465486110730") { // pixel's ID
             if (Math.random() >= 0.91) {
                 RandomStatement().then((m0) => {
