@@ -30,7 +30,7 @@ export default (client: Client): void => {
             }
         }
 
-        if (Math.random() >= 0.989) {
+        if (Math.random() >= 0.993) {
             message.reply("🎰🎰🎰jakpot jakpot");
         }
 
