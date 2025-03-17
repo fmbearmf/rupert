@@ -30,7 +30,7 @@ export default (client: Client): void => {
             }
         }
 
-        if ((Math.random() >= 0.39) && (message.content.toLowerCase().includes("mpreg"))) {
+        if ((Math.random() >= 0.79) && (message.content.toLowerCase().includes("mpreg"))) {
             message.reply("begone! 1 thousand years curse upon your village!!");
         }
 
