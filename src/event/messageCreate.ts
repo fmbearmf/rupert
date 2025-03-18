@@ -11,6 +11,13 @@ export default (client: Client): void => {
             return;
         }
 
+        if (message.content.toLowerCase().includes("ourpert")) {
+            if (Math.random() >= 0.65) {
+                message.reply("greenpert");
+                return;
+            }
+        }
+
         if (message.author.id === "674819147963564054") {
             if (Math.random() >= 0.94) {
                 message.reply("yeah okay, 'glistermelon'. stinky ahh");
@@ -30,7 +37,7 @@ export default (client: Client): void => {
             }
         }
 
-        if ((Math.random() >= 0.79) && (message.content.toLowerCase().includes("mpreg"))) {
+        if ((Math.random() >= 0.70) && (message.content.toLowerCase().includes("mpreg"))) {
             if (Math.random() >= 0.70) {
                 message.reply("📉📉📉");
             } else
