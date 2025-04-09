@@ -7,7 +7,10 @@ export default (client: Client): void => {
             if (Math.random() < 0.98) return;
 
         if (message.content.toLowerCase().includes("rupert")) {
-            message.reply({ content: "bluepert." });
+            if (measage.content.toLowerCase().includes("thank") {
+                message.reply({ content: "y'oure welcomepert" });
+            } else
+                message.reply({ content: "bluepert." });
             return;
         }
 
