@@ -3,6 +3,7 @@ import RandomStatement from "./ai/RandomStatement";
 
 export default (client: Client): void => {
     client.on("messageCreate", async (message: Message) => {
+        try {
         if (message.author.id === client.user?.id)
             if (Math.random() < 0.98) return;
 
@@ -52,6 +53,9 @@ export default (client: Client): void => {
                 message.reply(`${stmt}`);
             });
             return;
+        }
+        } catch (e: any) {
+            console.error(e);
         }
     });
 };
