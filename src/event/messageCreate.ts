@@ -7,6 +7,12 @@ export default (client: Client): void => {
         if (message.author.id === client.user?.id)
             if (Math.random() < 0.98) return;
 
+        if (message.content.toLowerCase().includes("stupid") 
+            && message.content.toLowerCase().includes("rupert")) {
+            message.reply({ content: "but then my name would be stupert" });
+            return;
+        }
+
         if (message.content.toLowerCase().includes("rupert")) {
             if (message.content.toLowerCase().includes("thank")) {
                 message.reply({ content: "y'oure welcomepert" });
