@@ -115,5 +115,9 @@ export default () => [
     "xertun",
     "popo",
     "bear",
-    "fat cat"
+    "fat cat",
+    "beetle",
+    "sluice",
+    "kiln",
+    "husk",
 ];

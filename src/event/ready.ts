@@ -22,9 +22,16 @@ export default (client: Client, restClient: REST): void => {
 
         const commandData = cmds.map((command) => command);
 
+        //await restClient.put(
+        //    Routes.applicationGuildCommands(
+        //        client.user.id, "1114565796404928594"
+        //    ),
+        //    {body: commandData}
+        //);
+
         await restClient.put(
             Routes.applicationGuildCommands(
-                client.user.id, "1114565796404928594"
+                client.user.id, "920868903889023006"
             ),
             {body: commandData}
         );

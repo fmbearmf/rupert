@@ -39,6 +39,7 @@ export default (): string[] => [
     "fearless",
     "felicitous",
     "frank",
+    "smelly",
     "garrulous",
     "gracious",
     "gregarious",
@@ -62,6 +63,7 @@ export default (): string[] => [
     "nurturing",
     "obliging",
     "opulent",
+    "observant",
     "pacific",
     "pellucid",
     "perceptive",
@@ -102,5 +104,6 @@ export default (): string[] => [
     "zealous",
     "zesty",
     "gray",
-    "rupertious"
+    "rupertious",
+    "fat",
 ];
