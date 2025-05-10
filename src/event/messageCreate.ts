@@ -13,6 +13,11 @@ export default (client: Client): void => {
                 return;
             }
 
+            if (message.content.includes(client.user!.id)) {
+                message.reply({ content: "gluepert" });
+                return;
+            }
+
             if (message.content.toLowerCase().includes("rupert")) {
                 if (message.content.toLowerCase().includes("thank")) {
                     message.reply({ content: "y'oure welcomepert" });
