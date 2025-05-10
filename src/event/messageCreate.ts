@@ -54,7 +54,7 @@ export default (client: Client): void => {
                     message.reply("begone! 1 thousand years curse upon your village!!");
             }
 
-            if (Math.random() >= 0.963) {
+            if (Math.random() >= 0.943) {
                 RandomStatement().then((stmt) => {
                     message.reply(`${stmt}`);
                 });
