@@ -34,7 +34,7 @@ export default (client: Client): void => {
             }
 
             if (message.author.id === "674819147963564054") {
-                if (Math.random() >= 0.94) {
+                if (Math.random() >= 0.989) {
                     message.reply("yeah okay, 'glistermelon'. stinky ahh");
                     return;
                 }
