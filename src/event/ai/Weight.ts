@@ -72,7 +72,7 @@ export async function getWeightedIndex(list: WeightedList): Promise<number> {
                 accml += list.weights[i];
                 if (random <= accml) {
                     if (list.decay) {
-                        list.weights[i] *= list.decay;
+                        //list.weights[i] *= list.decay;
                     }
                     resolve(i);
                     return;
