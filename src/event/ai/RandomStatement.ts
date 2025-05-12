@@ -61,7 +61,7 @@ export default async (): Promise<string> => {
     console.log("final prob: ", verbProbable);
     const includeVerb = Math.random() < verbProbable;
 
-    saveState(state);
+    //saveState(state);
 
     const stmt = `${includeVerb ? "the ": ""}${adjectives[await adjIndex]} ${nouns[await nounIndex]} ${includeVerb ? verbs[await verbIndex] : ""}...`;
     console.debug(`stmt: ${stmt}`);
