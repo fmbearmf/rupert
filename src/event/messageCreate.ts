@@ -1,6 +1,11 @@
 import { Client,  Message } from "discord.js";
 import RandomStatement from "./ai/RandomStatement";
 
+const bannedRupertUsers = [
+    "470010465486110730",
+    "691090730872995850"
+];
+
 export default (client: Client): void => {
     client.on("messageCreate", async (message: Message) => {
         try {
@@ -18,7 +23,7 @@ export default (client: Client): void => {
                 return;
             }
 
-            if (message.author.id === "470010465486110730") { // pixel's ID
+            if (bannedRupertUsers.includes(message.author.id)) {
                 return;
             }
 
