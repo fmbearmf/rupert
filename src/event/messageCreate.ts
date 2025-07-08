@@ -1,9 +1,10 @@
 import { Client,  Message } from "discord.js";
 import RandomStatement from "./ai/RandomStatement";
 
-const bannedRupertUsers = [
+export const bannedRupertUsers = [
     "470010465486110730",
-    "691090730872995850"
+    "691090730872995850",
+    "307677300730757120"
 ];
 
 export default (client: Client): void => {

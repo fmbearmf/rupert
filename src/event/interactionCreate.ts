@@ -1,9 +1,12 @@
-import { Client, CommandInteraction, Interaction } from "discord.js";
+import { Client, CommandInteraction, Interaction, RepliableInteraction } from "discord.js";
 import { cmds } from "../cmd/cmds";
+import { bannedRupertUsers } from "./messageCreate";
 
 export default (client: Client): void => {
     client.on("interactionCreate", async (interaction: Interaction) => {
         try {
+            if (bannedRupertUsers.includes(interaction.user.id)) return; 
+
             if (interaction.isCommand() || interaction.isContextMenuCommand()) {
                 await handleSlash(client, interaction);
             }
