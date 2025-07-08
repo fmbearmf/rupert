@@ -6,17 +6,22 @@ export const bannedRupertUsers = [
     "691090730872995850"
 ];
 
-export default (client: Client): void => {
+export default (client: Client, secondaryClient: Client): void => {
     client.on("messageCreate", async (message: Message) => {
         try {
             if (bannedRupertUsers.includes(message.author.id)) {
                 return;
             }
 
+            if (Math.random() > 0.7) { client = secondaryClient; } else return;
+
             const cnt = message.content;
             const Lcnt = message.content.toLowerCase();
 
             if (message.author.id === client.user?.id)
+                if (Math.random() < 0.98) return;
+
+            if (message.author.id === secondaryClient.user?.id)
                 if (Math.random() < 0.98) return;
 
             if (Lcnt.includes("stupid") 
@@ -30,11 +35,17 @@ export default (client: Client): void => {
                 return;
             }
 
+            if (Lcnt.includes("gluepert")) {
+                message.reply({ content: "rupert" });
+                return;
+            }
+
             if (Lcnt.includes("rupert")) {
                 if (Lcnt.includes("thank")) {
                     message.reply({ content: "y'oure welcomepert" });
-                } else
-                    message.reply({ content: "bluepert." });
+                } else {
+                    if (Math.random() > 0.8) message.reply({ content: "bluepert." });
+                }
                 return;
             }
 
@@ -43,6 +54,11 @@ export default (client: Client): void => {
                     message.reply("greenpert");
                     return;
                 }
+            }
+
+            if (Lcnt.includes("greenpert")) {
+                message.reply({ content: "i ran out of colors. bluepert" });
+                return;
             }
 
             if (message.author.id === "674819147963564054") {
