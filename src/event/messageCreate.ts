@@ -18,6 +18,10 @@ export default (client: Client): void => {
                 return;
             }
 
+            if (message.author.id === "470010465486110730") { // pixel's ID
+                return;
+            }
+
             if (message.content.toLowerCase().includes("rupert")) {
                 if (message.content.toLowerCase().includes("thank")) {
                     message.reply({ content: "y'oure welcomepert" });
@@ -37,18 +41,6 @@ export default (client: Client): void => {
                 if (Math.random() >= 0.989) {
                     message.reply("yeah okay, 'glistermelon'. stinky nerd.. more like glisternerd");
                     return;
-                }
-            }
-
-            if (message.author.id === "470010465486110730") { // pixel's ID
-                if (Math.random() >= 0.984) {
-                    RandomStatement().then((m0) => {
-                        RandomStatement().then((m1) => {
-                            RandomStatement().then((m2) => {
-                                message.reply(`${m0} ${m1} ${m2}`);
-                            });
-                        });
-                    });
                 }
             }
 
