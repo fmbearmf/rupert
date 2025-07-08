@@ -10,6 +10,10 @@ export const bannedRupertUsers = [
 export default (client: Client): void => {
     client.on("messageCreate", async (message: Message) => {
         try {
+            if (bannedRupertUsers.includes(message.author.id)) {
+                return;
+            }
+
             if (message.author.id === client.user?.id)
                 if (Math.random() < 0.98) return;
 
@@ -21,10 +25,6 @@ export default (client: Client): void => {
 
             if (message.content.includes(client.user!.id)) {
                 message.reply({ content: "gluepert" });
-                return;
-            }
-
-            if (bannedRupertUsers.includes(message.author.id)) {
                 return;
             }
 
