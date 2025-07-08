@@ -6,6 +6,7 @@ import interactionCreation from "./event/interactionCreate";
 import messageSent from "./event/messageCreate";
 
 if (!process.env.TOKEN) throw new Error("Token not defined.");
+if (!process.env.EVIL_TOKEN) throw new Error("Token not defined.");
 
 const client = new Client({
     intents: [
