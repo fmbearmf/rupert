@@ -3,8 +3,7 @@ import RandomStatement from "./ai/RandomStatement";
 
 export const bannedRupertUsers = [
     "470010465486110730",
-    "691090730872995850",
-    "307677300730757120"
+    "691090730872995850"
 ];
 
 export default (client: Client): void => {
@@ -20,7 +19,7 @@ export default (client: Client): void => {
             if (message.author.id === client.user?.id)
                 if (Math.random() < 0.98) return;
 
-            if (cnt.toLowerCase().includes("stupid") 
+            if (Lcnt.includes("stupid") 
             && Lcnt.includes("rupert")) {
                 message.reply({ content: "but then my name would be stupert" });
                 return;
