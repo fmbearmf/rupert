@@ -14,29 +14,32 @@ export default (client: Client): void => {
                 return;
             }
 
+            const cnt = message.content;
+            const Lcnt = message.content.toLowerCase();
+
             if (message.author.id === client.user?.id)
                 if (Math.random() < 0.98) return;
 
-            if (message.content.toLowerCase().includes("stupid") 
-            && message.content.toLowerCase().includes("rupert")) {
+            if (cnt.toLowerCase().includes("stupid") 
+            && Lcnt.includes("rupert")) {
                 message.reply({ content: "but then my name would be stupert" });
                 return;
             }
 
-            if (message.content.includes(client.user!.id)) {
+            if (cnt.includes(client.user!.id)) {
                 message.reply({ content: "gluepert" });
                 return;
             }
 
-            if (message.content.toLowerCase().includes("rupert")) {
-                if (message.content.toLowerCase().includes("thank")) {
+            if (Lcnt.includes("rupert")) {
+                if (Lcnt.includes("thank")) {
                     message.reply({ content: "y'oure welcomepert" });
                 } else
                     message.reply({ content: "bluepert." });
                 return;
             }
 
-            if (message.content.toLowerCase().includes("ourpert")) {
+            if (Lcnt.includes("ourpert")) {
                 if (Math.random() >= 0.65) {
                     message.reply("greenpert");
                     return;
@@ -50,7 +53,7 @@ export default (client: Client): void => {
                 }
             }
 
-            if ((Math.random() >= 0.70) && (message.content.toLowerCase().includes("mpreg"))) {
+            if ((Math.random() >= 0.70) && (Lcnt.includes("mpreg"))) {
                 if (Math.random() >= 0.70) {
                     message.reply("📉📉📉");
                 } else
