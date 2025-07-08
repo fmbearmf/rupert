@@ -43,9 +43,8 @@ export default (client: Client, secondaryClient: Client): void => {
             if (Lcnt.includes("rupert")) {
                 if (Lcnt.includes("thank")) {
                     message.reply({ content: "y'oure welcomepert" });
-                } else {
-                    if (Math.random() > 0.4) message.reply({ content: "bluepert." });
-                }
+                } else
+                    message.reply({ content: "bluepert." });
                 return;
             }
 
