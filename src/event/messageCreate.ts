@@ -13,7 +13,9 @@ export default (client: Client, secondaryClient: Client): void => {
                 return;
             }
 
-            if (Math.random() > 0.7) { client = secondaryClient; } else return;
+            if (Math.random() > 0.7) { 
+                [client, secondaryClient] = [secondaryClient, client]; 
+            } else return;
 
             const cnt = message.content;
             const Lcnt = message.content.toLowerCase();
