@@ -35,5 +35,13 @@ export default (client: Client, restClient: REST): void => {
             ),
             {body: commandData}
         );
+
+
+        await restClient.put(
+            Routes.applicationCommands(
+                client.user.id, "920868903889023006"
+            ),
+            {body: commandData}
+        );
     });
 };
