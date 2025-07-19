@@ -39,7 +39,7 @@ export default (client: Client, restClient: REST): void => {
 
         await restClient.put(
             Routes.applicationCommands(
-                client.user.id, "920868903889023006"
+                client.user.id
             ),
             {body: commandData}
         );
