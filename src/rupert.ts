@@ -9,31 +9,29 @@ if (!process.env.TOKEN) throw new Error("Token not defined.");
 if (!process.env.EVIL_TOKEN) throw new Error("Token not defined.");
 
 const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMembers,
-	GatewayIntentBits.DirectMessages,
-    ],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.DirectMessages,
+  ],
 });
 
 const client2 = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMembers,
-	GatewayIntentBits.DirectMessages,
-    ],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.DirectMessages,
+  ],
 });
 
-const rest = new REST({version: "9"}).setToken(
-    process.env.TOKEN as string
-);
+const rest = new REST({ version: "9" }).setToken(process.env.TOKEN as string);
 
-const rest2 = new REST({version: "9"}).setToken(
-    process.env.EVIL_TOKEN as string
+const rest2 = new REST({ version: "9" }).setToken(
+  process.env.EVIL_TOKEN as string,
 );
 
 ready(client, rest);
